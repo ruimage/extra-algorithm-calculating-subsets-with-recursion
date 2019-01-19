@@ -15,9 +15,9 @@ f(n, k)  = f(n - 1, k - 1) + f(n - 1, k)
 f(5, 3)  = f(4, 2) + f(4, 3)
 f(10, 4) = f(9, 3) + f(9, 4)
 ```
-*Figure 1*. Общая формула для `f(n, k)` с двумя примерами.
+*рис 1*. Общая формула для `f(n, k)` с двумя примерами.
 
-We know that our function needs two inputs:  `n` and `k`.  But what do we do with those inputs?  Figure 1 shows the calculations that we do with them.  Let's take a minute to review both the general formula and how it would be applied to the specific situations we've been discussing.  What type of algorithm does this look like?
+Мы знаем, что на входе функция должна принять `n` и `k`. Но что мы должны сделать с этими данными? На рис1 представлены вычисления, которые нужно провести. Присмотритесь к общей формуле и подумайте, как это можно применить к ситуациям, описанным выше. На какой алгоритм это похоже?
 
 
 ### Известные числа подмножеств
@@ -26,14 +26,13 @@ f(0, 5) = 0
 f(3, 0) = 1
 f(7, 1) = 7
 ```
-*Figure 2*. Known values for specific input conditions.
+*рис 2*. Известные значения для некоторых начальных условий.
 
-There are some conditions where we know how many subsets we can calculate based on the inputs.  These conditions are shown in Figure 2 and detailed in the following points.
+Существуют некоторые условия, когда мы знаем, сколько подмножеств получится, видя только входные данные. Эти условия показаны на рис 2 и детально о них можно написать следующее:
 
-- If there are zero options, we can make zero subsets.
-- We can always make one subset of size zero, the empty set.
-- If we're trying to make subsets of size one, then we can make as many subsets as there are options.
-
+- Если у нас 0 входных величин, получится 0 подмножеств.
+- Мы всегда можем сделать 1 подмножество размера 0 - нулевое множество.
+- Если мы хотим составить подмножества размера 1, то у нас получится столько подмножеств, сколько значений во входном множестве.
 
 ## Releases
 ### Release 0: Напишите эту функцию!
@@ -47,9 +46,10 @@ subsetCount(6, 3)
 subsetCount(24, 4)
 # => 10626
 ```
+*рис 3*. 
 
-Write a `subsetCount` method that implements the function we defined in the *Summary*.  Our method should accept two arguments, the number of options and the subset size, and it should return the number of unique combinations of the subset size that can be made from the number of options (see Figure 3).  Tests have been written to describe the known conditions (e.g., when there are zero options).  We'll need to write tests for other use cases.
+Реализуйте метод `subsetCount`, который описывает функцию, которую мы определили во *Введении*. Наш метод должен принимать два аргумента, число значений множества и размер подмножества и должен возвращать число уникальных комбинаций размера подмножества, которые можно получить из данного множества (см. рис 3). Были написаны тесты, в которых описываются известные условия (например, когда у нас 0 элементов в множестве). Нужно будет дописать тесты для других вариантов использования.
 
+## Заключение
+Имея настоящую функцию, нашей задачей было записать ее на JavaScript. При разработке алгоритмов иногда полезно понять, как мы можем решить проблему в реальном мире и потом перевести этот процесс в JS.
 
-## Conclusion
-Given a real-world function, we were required to translate it into Ruby.  When developing an algorithm, it's sometimes helpful to understand how we would solve the problem in the real world and then translate our process into Ruby.
