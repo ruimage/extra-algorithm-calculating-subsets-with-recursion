@@ -5,7 +5,7 @@ describe("calculating the number of subsets", () => {
     });
 
     it('one subset of size zero', () => {
-        expect(subsetCount(0, 5)).toEqual(1);
+        expect(subsetCount(5, 0)).toEqual(1);
     });
 
     it('number of size-one subsets is equal to the number of options', () => {
