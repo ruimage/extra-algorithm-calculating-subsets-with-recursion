@@ -1,3 +1,5 @@
+const subsetCount = require('../subsetCount');
+
 describe("calculating the number of subsets", () => {
 
     it('zero subsets if zero options to choose from', () => {
